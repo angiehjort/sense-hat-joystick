@@ -1,0 +1,13 @@
+{
+	"name"         : "sense-hat-joystick",
+	"version"      : "0.1.0",
+	"description"  : "NodeJS Sense Hat Joystick",
+	"keywords"     : [ "sense-hat", "joystick" ],
+	"author"       : "Diogo Resende <dresende@thinkdigital.pt>",
+	"repository"   : "http://github.com/dresende/sense-hat-joystick.git",
+	"license"      : "MIT",
+	"main"         : "Joystick.js",
+	"dependencies" : {
+		"glob" : "7.1.2"
+	}
+}
