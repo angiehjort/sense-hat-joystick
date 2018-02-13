@@ -58,7 +58,7 @@ class Joystick extends EventEmitter {
 	}
 
 	end() {
-		this.fd.end();
+		this.fd.destroy();
 	}
 }
 
