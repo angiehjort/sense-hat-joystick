@@ -5,13 +5,11 @@ This module enables you to listen for joystick events (up, down, left, ..) with 
 ### Example
 
 ```js
-const Joystick = require("./joysticklib.js");
+const Joystick = require("./Joystick.js");
 const sense = require("sense-hat-led");
 
 const joystick = new Joystick();
-sense.showMessage("test", 0.1)
 
-// possible events: left, right, up, down and enter
 joystick.on("left", () => {
     sense.showMessage("left", 0.1)
 });
