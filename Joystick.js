@@ -1,9 +1,10 @@
+"use strict";
 const EventEmitter = require("events");
 const glob         = require("glob");
 const path         = require("path");
 const fs           = require("fs");
 
-const EV_KEY  = 0x01;
+const EV_KEY  = 1;
 const KEY_MAP = {
 	103 : "up",
 	105 : "left",
@@ -45,15 +46,14 @@ class Joystick extends EventEmitter {
 
 	process(msg) {
 		// if you need the time:
-		// let sec   = msg.readUInt32LE(0);
-		// let usec  = msg.readUInt32LE(4);
-		let type  = msg.readUInt16LE(8);
-		let code  = msg.readUInt16LE(10);
-		let value = msg.readUInt32LE(12);
+		let type = msg.readUInt16LE(0);
+		let code = msg.readUInt16LE(2);
+		let value = msg.readUInt16LE(4);
 
 		if (type != EV_KEY) return; // not key press event
-		if (value != 1) return;     // not press, it's a release
-
+		if (value != 1) return;     // 1 - press, 2 - hold, 0 - release
+		
+        console.log("new event", {type, code, value});
 		KEY_MAP[code] && this.emit(KEY_MAP[code]);
 	}
 
@@ -62,4 +62,4 @@ class Joystick extends EventEmitter {
 	}
 }
 
-exports.Joystick = Joystick;
+module.exports = Joystick;
