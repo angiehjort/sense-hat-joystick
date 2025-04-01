@@ -53,7 +53,6 @@ class Joystick extends EventEmitter {
 		if (type != EV_KEY) return; // not key press event
 		if (value != 1) return;     // 1 - press, 2 - hold, 0 - release
 		
-        console.log("new event", {type, code, value});
 		KEY_MAP[code] && this.emit(KEY_MAP[code]);
 	}
 
