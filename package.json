@@ -1,7 +1,7 @@
 {
-	"name"         : "sense-hat-joystick",
+	"name"         : "sense-hat-joystick-x64",
 	"version"      : "0.2.0",
-	"description"  : "NodeJS Sense Hat Joystick",
+	"description"  : "NodeJS Sense Hat Joystick for 64bit linux",
 	"keywords"     : [ "sense-hat", "joystick" ],
 	"author"       : "Diogo Resende <dresende@thinkdigital.pt>",
 	"repository"   : "http://github.com/dresende/sense-hat-joystick.git",
