@@ -2,6 +2,9 @@
 
 This module enables you to listen for joystick events (up, down, left, ..) with not external dependencies.
 
+### install 
+npm install sense-hat-joystick-x64
+
 ### Example
 
 ```js
